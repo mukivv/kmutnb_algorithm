@@ -17,11 +17,11 @@ struct DisjointSet {
     
     DisjointSet(int n) {
         parent.resize(n + 1);
-        for (int i = 1; i <= n; i++) parent[i] = i;
+        for (int i = 1; i <= n; i++) parent[i] = -1;
     }
     int find(int i) {
-        if (parent[i] == i) return i;
-        return parent[i] = find(parent[i]);
+        if (parent[i] == -1) return i;
+        return find(parent[i]);
     }
     void uni(int i, int j) {
         int root_i = find(i);
