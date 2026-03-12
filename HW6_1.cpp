@@ -11,7 +11,7 @@ void swap(int *a, int *b)
 
 void print(int x[], int end)
 {
-    for (int i = 1; i <= end; i++){
+    for (int i = 1; i < end; i++){
     	if ( (x[i] == 1 && x[i+1] == 2) || (x[i] == 2 && x[i+1] == 1) )
         x[0]++;    	
 	}
@@ -43,4 +43,5 @@ int main()
     	cout << x[0] << endl;
 	}
 }
+
 
