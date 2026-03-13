@@ -37,12 +37,13 @@ int main(){
 	cin >> c;
 	for (int i=0;i<c;i++){
 		cin >> n >> m >> s >> t;
-		vector<pair<int, int> > graph[n];
+		vector<pair<int, int> > graph[n+1];
 		for (int j=0;j<m;j++){
 			cin >> a >> b >> w;
 			graph[a].push_back({ b,w });
 			graph[b].push_back({ a,w });
 		}
-		cout << dijkstra(graph,n,s,t) << endl;
+		cout << dijkstra(graph,n+1,s,t) << endl;
 	}
 }
+
